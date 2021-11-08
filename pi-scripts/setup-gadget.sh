@@ -24,7 +24,7 @@ echo "Pi Zero Gadget"   > strings/0x409/product
 mkdir -p functions/mass_storage.usb0
 mkdir -p functions/rndis.usb0
 
-dd if=/dev/zero of=/tmp/test.img bs=1M count=20 
+dd if=/dev/zero of=/tmp/test.img bs=1M count=100
 
 cd functions/mass_storage.usb0
 echo 0 > stall
