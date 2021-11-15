@@ -1,0 +1,13 @@
+[Unit]
+Description=USB composite (ethernet + mass_storage) gadget service 
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/home/pi/setup-gadget.sh
+ExecStart=/home/pi/setup-ethernet.sh
+
+[Install]
+WantedBy=multi-user.target
